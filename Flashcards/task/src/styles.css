@@ -1,0 +1,66 @@
+body {
+    /*background-color: #173842;*/
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-area {
+    background: linear-gradient(#66b4dd, #285c70);
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-area {
+    font-family: 'Lato', sans-serif;
+    max-width: 750px;
+    margin: auto;
+    padding: 10px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: 2s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.front {
+    background-color: aliceblue;
+    font-size: larger;
+    z-index: 2;
+}
+
+.back {
+    background-color: mintcream;
+    font-size: 1.25rem;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
